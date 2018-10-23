@@ -25,7 +25,13 @@ mnist = input_data.read_data_sets(data_dir,one_hot = True)
 
 #sess = tf.InteractiveSession(config = config)
 sess = tf.InteractiveSession()
-
+#with相当于如下的try代码组，他会自动处理本来应该在finally中处理的代码
+#　try :
+#
+#　　except:
+#
+#　　finally:
+#
 with tf.name_scope('input'):
     x = tf.placeholder(tf.float32, [None, 784], name='x-input')
     y_ = tf.placeholder(tf.float32, [None, 10], name='y-input')
