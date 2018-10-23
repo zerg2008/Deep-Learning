@@ -8,13 +8,13 @@ Modify:2018-01-23
 Author:Jack Cui
 '''
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
-config = tf.ConfigProto(allow_soft_placement = True)
-gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction = 0.33)
-config.gpu_options.allow_growth = True
+# os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+# config = tf.ConfigProto(allow_soft_placement = True)
+# gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction = 0.33)
+# config.gpu_options.allow_growth = True
 
 
-max_steps = 1000  # 最大迭代次数,测试上传
+max_steps = 1000  # 最大迭代次数,使用pycharm向github上传
 learning_rate = 0.001   # 学习率
 dropout = 0.9   # dropout时随机保留神经元的比例
 data_dir = './MNIST_DATA'   # 样本数据存储的路径
@@ -23,7 +23,8 @@ log_dir = './MNIST_LOG'    # 输出日志保存的路径
 # 获取数据集，并采用采用one_hot热编码
 mnist = input_data.read_data_sets(data_dir,one_hot = True)
 
-sess = tf.InteractiveSession(config = config)
+#sess = tf.InteractiveSession(config = config)
+sess = tf.InteractiveSession()
 
 with tf.name_scope('input'):
     x = tf.placeholder(tf.float32, [None, 784], name='x-input')
