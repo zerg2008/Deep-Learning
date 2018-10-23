@@ -14,7 +14,7 @@ gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction = 0.33)
 config.gpu_options.allow_growth = True
 
 
-max_steps = 1000  # 最大迭代次数
+max_steps = 1000  # 最大迭代次数,测试上传
 learning_rate = 0.001   # 学习率
 dropout = 0.9   # dropout时随机保留神经元的比例
 data_dir = './MNIST_DATA'   # 样本数据存储的路径
