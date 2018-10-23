@@ -14,7 +14,7 @@ Author:Jack Cui
 # config.gpu_options.allow_growth = True
 
 
-max_steps = 1000  # 最大迭代次数,使用pycharm向github上传，2018.10.23,下午,再次测试
+max_steps = 1000  # 最大迭代次数,使用pycharm向github上传，2018.10.23,下午,再次测试等等
 learning_rate = 0.001   # 学习率
 dropout = 0.9   # dropout时随机保留神经元的比例
 data_dir = './MNIST_DATA'   # 样本数据存储的路径
